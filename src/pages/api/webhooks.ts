@@ -18,6 +18,9 @@ export default function handler(
 ) {
 	const data = request.body
 
+	console.log('DEBUG: request.body')
+	console.log(data)
+
 	if (data.event === 'endpoint.url_validation') {
 		const hashForValidate = crypto
 			.createHmac('sha256', ZOOM_WEBHOOK_SECRET_TOKEN)
